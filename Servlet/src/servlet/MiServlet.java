@@ -22,13 +22,7 @@ public class MiServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		System.out.println("Has llamado a doGet");
 
-		// String nombre = req.getParameter("nombre");
-		//
-		// resp.setContentType("text/html");
-		// PrintWriter out = resp.getWriter();
-		// out.println("El numero de letras que tiene el nombre es:" + nombre);
-
-		super.doGet(req, resp);
+		// super.doGet(req, resp);
 	}
 
 	@Override
