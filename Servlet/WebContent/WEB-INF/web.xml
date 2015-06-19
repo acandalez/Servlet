@@ -9,19 +9,23 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  
-  <!-- Configuracion del servlet -->
+  <servlet>
+    <description>Ejemplo de Prueba</description>
+    <servlet-name>MiServlet</servlet-name>
+    <servlet-class>servlet.MiServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MiServlet</servlet-name>
+    <url-pattern>/MiServlet</url-pattern>
+  </servlet-mapping>
   
   <servlet>
-  <description>Ejemplo de Prueba</description>
-  <servlet-name>MiServlet</servlet-name>
-  <servlet-class>servlet.MiServlet</servlet-class>
-  
-	</servlet>
-<servlet-mapping>
-	<servlet-name>MiServlet</servlet-name>
-	<url-pattern>/MiServlet</url-pattern>
-	
-</servlet-mapping>
-  
+    <description>Practica 1</description>
+    <servlet-name>Practica 1</servlet-name>
+    <servlet-class>practica1.Practica1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Practica 1</servlet-name>
+    <url-pattern>/Practica 1</url-pattern>
+  </servlet-mapping>
 </web-app>
