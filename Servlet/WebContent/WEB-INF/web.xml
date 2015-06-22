@@ -28,4 +28,52 @@
     <servlet-name>Practica 1</servlet-name>
     <url-pattern>/Practica 1</url-pattern>
   </servlet-mapping>
+  
+  
+  
+  
+  <servlet>
+    <description>Listener1Contes</description>
+    <servlet-name>Listener1Contes</servlet-name>
+    <servlet-class>teoria.Listener1Contest</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Listener1Contes</servlet-name>
+    <url-pattern>/Listener1Contes</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description>Listener2Sesion</description>
+    <servlet-name>Listener2Sesion</servlet-name>
+    <servlet-class>teoria.Listener2Sesion</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Listener2Sesion</servlet-name>
+    <url-pattern>/Listener2Sesion</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description>Listener3Request</description>
+    <servlet-name>Listener3Request</servlet-name>
+    <servlet-class>teoria.Listener3Request</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Listener3Request</servlet-name>
+    <url-pattern>/Listener3Request</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  <listener>
+	<listener-class>teoria.Listeners1Contest</listener-class>
+</listener>
+  <listener>
+	<listener-class>teoria.Listeners2Sesion</listener-class>
+</listener>
+  <listener>
+	<listener-class>teoria.Listeners3Request</listener-class>
+</listener>
+  
 </web-app>
