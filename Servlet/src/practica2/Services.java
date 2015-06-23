@@ -1,13 +1,12 @@
 package practica2;
 
-import hibernate.primerexamenoficial.dto.Departments;
-import hibernate.primerexamenoficial.dto.Employees;
-
 import java.math.BigDecimal;
 import java.util.List;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+
+import dto.Departments;
 
 /**
  * SERVICO INCREMENTAR SALARIO - OBTENER EMPLEADOS DE UN DEPARTAMENTO DADA SU ID
