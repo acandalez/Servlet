@@ -2,7 +2,7 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
   <display-name>Servlet</display-name>
   <welcome-file-list>
-    <welcome-file>Indice.html</welcome-file>
+    <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
     <welcome-file>index.jsp</welcome-file>
     <welcome-file>default.html</welcome-file>
@@ -18,62 +18,40 @@
     <servlet-name>MiServlet</servlet-name>
     <url-pattern>/MiServlet</url-pattern>
   </servlet-mapping>
-  
   <servlet>
-    <description>Practica 1</description>
-    <servlet-name>Practica 1</servlet-name>
-    <servlet-class>practica1.Practica1</servlet-class>
+    <description>ServletHibernate</description>
+    <servlet-name>ServletHibernate</servlet-name>
+    <servlet-class>practica3.servlets.ServletHibernate</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>Practica 1</servlet-name>
-    <url-pattern>/Practica 1</url-pattern>
+    <servlet-name>ServletHibernate</servlet-name>
+    <url-pattern>/ServletHibernate</url-pattern>
   </servlet-mapping>
-  
-  
-  
-  
   <servlet>
-    <description>Listener1Contes</description>
-    <servlet-name>Listener1Contes</servlet-name>
-    <servlet-class>teoria.Listener1Contest</servlet-class>
+    <description>ServletJDBC</description>
+    <servlet-name>ServletJDBC</servlet-name>
+    <servlet-class>practica3.servlets.ServletJDBC</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>Listener1Contes</servlet-name>
-    <url-pattern>/Listener1Contes</url-pattern>
+    <servlet-name>ServletJDBC</servlet-name>
+    <url-pattern>/ServletJDBC</url-pattern>
   </servlet-mapping>
-  
-  <servlet>
-    <description>Listener2Sesion</description>
-    <servlet-name>Listener2Sesion</servlet-name>
-    <servlet-class>teoria.Listener2Sesion</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>Listener2Sesion</servlet-name>
-    <url-pattern>/Listener2Sesion</url-pattern>
-  </servlet-mapping>
-  
-  <servlet>
-    <description>Listener3Request</description>
-    <servlet-name>Listener3Request</servlet-name>
-    <servlet-class>teoria.Listener3Request</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>Listener3Request</servlet-name>
-    <url-pattern>/Listener3Request</url-pattern>
-  </servlet-mapping>
-  
-  
-  
-  
-  
   <listener>
-	<listener-class>teoria.Listeners1Contest</listener-class>
-</listener>
+	<listener-class>teoria.Listeners1Context</listener-class>
+  </listener>
   <listener>
 	<listener-class>teoria.Listeners2Sesion</listener-class>
-</listener>
+  </listener>
   <listener>
 	<listener-class>teoria.Listeners3Request</listener-class>
-</listener>
+  </listener>
+  <filter>
+    <filter-name>Filtro1</filter-name>
+    <filter-class>practica3.Filters</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>filters</filter-name>
+    <url-pattern>/ServletHibernate</url-pattern> 
+  </filter-mapping>
   
 </web-app>
