@@ -9,9 +9,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.hibernate.SessionFactory;
 
+@SuppressWarnings("serial")
 public class Servlet extends HttpServlet {
+
+	// Nuestro archivo log.
+	@SuppressWarnings("unused")
+	private final Logger log = LogManager.getRootLogger();
 
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
@@ -24,7 +31,10 @@ public class Servlet extends HttpServlet {
 
 		// Hacemos referencia al contexto
 		ServletContext sc = request.getServletContext();
-		// Solicitamos al contexto el objeto de SessionFactory
+
+		// Solicitamos al contexto el objeto de SessionFactory por medio del
+		// getAtribute.
+
 		SessionFactory sf = (SessionFactory) sc.getAttribute("sf");
 		// Abrimos la sesion
 		sf.openSession();
