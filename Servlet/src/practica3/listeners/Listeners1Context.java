@@ -4,11 +4,15 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.hibernate.SessionFactory;
 
 import practica3.SesionManager;
 
 public class Listeners1Context implements ServletContextListener {
+
+	private Logger log = LogManager.getRootLogger();
 
 	/**
 	 * SERVLET CONTEST ES COMO UN SACO Y VIVE EN TODO EL TRANSCURSO DE LA
@@ -34,6 +38,8 @@ public class Listeners1Context implements ServletContextListener {
 	@Override
 	public void contextInitialized(ServletContextEvent arg0) {
 		// TODO Auto-generated method stub
+		// Muestro el tiempo total que tarda mi aplicacion en ejecutarse.
+		log.trace("listeners1Context - contexInitialized");
 
 		System.out.println("contextInitialized");
 		// Obtengo el objeto de ServletContext
@@ -42,6 +48,10 @@ public class Listeners1Context implements ServletContextListener {
 														// objetos.
 		SessionFactory sf = SesionManager.getSessionFactory();
 		sc.setAttribute("sf"/* identificador */, sf/* Objeto */);
+
+		// Creamos un contador de peticiones
+		int c = 0;
+		sc.setAttribute("contador", c);
 
 	}
 }

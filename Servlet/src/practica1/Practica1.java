@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import ejemplopulldeconcexion.Pool;
+import pool.Pool;
 
 /**
  * Servlet implementation class Practica1
