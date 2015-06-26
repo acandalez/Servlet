@@ -18,7 +18,7 @@
         
         
         <!-- Mapping files -->
-   
+  		<mapping resource="Departments.hbm.xml"/>
         
     </session-factory>
 </hibernate-configuration>

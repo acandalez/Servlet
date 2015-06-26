@@ -18,7 +18,6 @@
     <servlet-name>MiServlet</servlet-name>
     <url-pattern>/MiServlet</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <description>ServletHibernate</description>
     <servlet-name>ServletHibernate</servlet-name>
@@ -28,7 +27,6 @@
     <servlet-name>ServletHibernate</servlet-name>
     <url-pattern>/ServletHibernate</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <description>ServletJDBC</description>
     <servlet-name>ServletJDBC</servlet-name>
@@ -48,13 +46,13 @@
     <url-pattern>/Login</url-pattern>
   </servlet-mapping>
   <listener>
-    <listener-class>teoria.Listeners1Context</listener-class>
+    <listener-class>listeners.Context</listener-class>
   </listener>
   <listener>
-    <listener-class>teoria.Listeners2Sesion</listener-class>
+    <listener-class>listeners.Sesion</listener-class>
   </listener>
   <listener>
-    <listener-class>teoria.Listeners3Request</listener-class>
+    <listener-class>listeners.Request</listener-class>
   </listener>
   <filter>
     <filter-name>FilterJDBC</filter-name>
@@ -68,13 +66,7 @@
     <param-name>username</param-name>
     <param-value>system</param-value>
   </context-param>
-  <servlet>
-    <description>ServletSesion</description>
-    <servlet-name>ServletSesion</servlet-name>
-    <servlet-class>teoria.ServletSesion</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>ServletSesion</servlet-name>
-    <url-pattern>/ServletSesion</url-pattern>
-  </servlet-mapping>
+  <session-config>
+    <session-timeout>1</session-timeout>
+  </session-config>
 </web-app>

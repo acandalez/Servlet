@@ -1,15 +1,19 @@
-package teoria;
+package listeners;
 
 import javax.servlet.ServletRequestEvent;
 import javax.servlet.ServletRequestListener;
 
-public class Listeners3Request implements ServletRequestListener {
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+public class Request implements ServletRequestListener {
+	private final Logger log = LogManager.getRootLogger();
 
 	@Override
 	public void requestDestroyed(ServletRequestEvent arg0) {
 		// TODO Auto-generated method stub
 
-		System.out.println("requestDestroyed");
+		log.info("requestDestroyed");
 
 	}
 
@@ -17,7 +21,7 @@ public class Listeners3Request implements ServletRequestListener {
 	public void requestInitialized(ServletRequestEvent arg0) {
 		// TODO Auto-generated method stub
 
-		System.out.println("requestInitialized");
+		log.info("requestInitialized");
 
 	}
 

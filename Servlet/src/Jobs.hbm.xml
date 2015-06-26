@@ -2,7 +2,7 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <!-- Generated 09-jun-2015 15:28:56 by Hibernate Tools 4.3.1 -->
-<hibernate-mapping package="clases_y_mapas_codegeneration">
+<hibernate-mapping package="dto">
     <class name="Jobs" table="JOBS" optimistic-lock="version">
         <comment>jobs table with job titles and salary ranges. Contains 19 rows. References with employees and job_history table.</comment>
         <id name="jobId" type="string">
