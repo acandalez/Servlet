@@ -25,7 +25,7 @@ public class Context implements ServletContextListener {
 	public void contextDestroyed(ServletContextEvent arg0) {
 		// TODO Auto-generated method stub
 		log.info("contextDestroyed");
-		SessionFactory sf;
+		SessionFactory sf = null;
 		ServletContext sc = null;
 
 		sc = arg0.getServletContext();// Es un espacio donde
@@ -45,7 +45,7 @@ public class Context implements ServletContextListener {
 		// TODO Auto-generated method stub
 
 		log.info("contextInitialized");
-		SessionFactory sf;
+		SessionFactory sf = null;
 		ServletContext sc = null;
 		Map<String, HttpSession> usuarios_activos = null;
 

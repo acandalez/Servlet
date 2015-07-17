@@ -8,10 +8,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import main.dto_hibernate.Employees;
 import practica3.EmployeeService;
 import practica3.Recuperable;
 import practica3.hib_jdbc.EmployeeHibernateDAO;
-import dto.Employees;
 
 public class ServletHibernate extends HttpServlet {
 

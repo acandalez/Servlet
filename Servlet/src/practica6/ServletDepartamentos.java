@@ -11,10 +11,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import main.dto_hibernate.Departments;
+
 import org.hibernate.Session;
 
 import teoria.SesionManager;
-import dto.Departments;
 
 /**
  * Servlet implementation class ServletDepartamentos

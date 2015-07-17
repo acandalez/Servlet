@@ -5,9 +5,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import main.dto_JDBC.EmployeesDTO;
 import pool.Pool;
 import practica3.Recuperable;
-import dto.JDBC.EmployeesDTO;
 
 public class EmployeeJDBC implements Recuperable {
 

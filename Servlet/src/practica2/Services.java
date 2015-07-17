@@ -3,10 +3,10 @@ package practica2;
 import java.math.BigDecimal;
 import java.util.List;
 
+import main.dto_hibernate.Departments;
+
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-
-import dto.Departments;
 
 /**
  * SERVICO INCREMENTAR SALARIO - OBTENER EMPLEADOS DE UN DEPARTAMENTO DADA SU ID

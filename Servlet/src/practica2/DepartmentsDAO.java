@@ -2,10 +2,10 @@ package practica2;
 
 import java.util.List;
 
+import main.dto_hibernate.Departments;
+
 import org.hibernate.SQLQuery;
 import org.hibernate.Session;
-
-import dto.Departments;
 
 /**
  * DEPARTAMENTOS DAO.

@@ -54,14 +54,6 @@
   <listener>
     <listener-class>listeners.Request</listener-class>
   </listener>
-  <filter>
-    <filter-name>FilterJDBC</filter-name>
-    <filter-class>practica3.filters.FilterJDBC</filter-class>
-  </filter>
-  <filter-mapping>
-    <filter-name>FilterJDBC</filter-name>
-    <url-pattern>/FilterJDBC</url-pattern>
-  </filter-mapping>
   <context-param>
     <param-name>username</param-name>
     <param-value>system</param-value>
@@ -69,4 +61,12 @@
   <session-config>
     <session-timeout>1</session-timeout>
   </session-config>
+  <error-page>
+    <error-code>404</error-code>
+    <location>/ServletError</location>
+  </error-page>
+  <error-page>
+    <exception-type> javax.servlet.ServletException </exception-type>
+    <location>/ ServletError</location>
+  </error-page>
 </web-app>
